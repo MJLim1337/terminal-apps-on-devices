@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">Apps on Devices Sample App</string>
 
-    <string name="terminal_sample_app">Terminal sample app</string>
-    <string name="new_payment">New payment</string>
+    <string name="terminal_sample_app">NUS Giving</string>
+    <string name="new_payment">New donation</string>
 
     <string name="please_select_reader">Please select a reader first!</string>
 
@@ -44,4 +44,22 @@
     <string name="no_receipt">No receipt</string>
     <string name="send">Send</string>
     <string name="invalid_email">"Invalid email"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="select_donation_amount">Select donation amount:</string>
+    <string name="confirmt_amount">Confirm amount</string>
+    <string name="detail_header">Please enter your details</string>
+    <string name="detail_name">Name:</string>
+    <string name="detail_email">Email:</string>
+    <string name="detail_phone">Phone:</string>
+    <string name="detail_identity">NRIC</string>
+    <string name="detail_donation_amount">Donation amount:</string>
+    <string name="price_custom">Custom</string>
+    <string name="detail_donate">Donate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="auth_header">Enter your personal information via:</string>
+    <string name="auth_manual_btn">Manual enter</string>
+    <string name="auth_scan_nus_button">Scan NUS Card</string>
+    <string name="auth_qr_nus_button">QR code of NUS E-Card</string>
+    <string name="singpass">Singpass</string>
 </resources>

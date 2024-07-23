@@ -19,6 +19,7 @@ class ReceiptFragment : Fragment(R.layout.fragment_receipt) {
         super.onViewCreated(view, savedInstanceState)
         val viewBinding = FragmentReceiptBinding.bind(view)
 
+        viewBinding.paymentIntentId.text = args.paymentIntentID
         viewBinding.totalAmount.text = formatCentsToString(args.amount)
         viewBinding.receiptPrint.isEnabled = false
         viewBinding.receiptSms.isEnabled = false

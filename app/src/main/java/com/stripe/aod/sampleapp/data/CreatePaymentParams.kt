@@ -6,6 +6,7 @@ data class CreatePaymentParams(
     val requestExtendedAuthorization: Boolean = true,
     val requestIncrementalAuthorizationSupport: Boolean = true,
     val description: String = "",
+    val metadata: Map<String, String>
 )
 
 fun CreatePaymentParams.toMap(): Map<String, String> {
@@ -13,6 +14,7 @@ fun CreatePaymentParams.toMap(): Map<String, String> {
         "amount" to amount.toString(),
         "currency" to currency,
         "description" to description,
+        "metadata" to metadata.toString(),
         "payment_method_options[card_present[request_extended_authorization]]" to requestExtendedAuthorization.toString(),
         "payment_method_options[card_present[request_incremental_authorization_support]]" to requestIncrementalAuthorizationSupport.toString()
     )

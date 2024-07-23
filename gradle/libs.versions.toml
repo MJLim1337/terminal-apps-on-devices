@@ -3,6 +3,7 @@ lifecycle-version = "2.7.0"
 navigation-version = "2.7.6"
 retrofit-version = "2.9.0"
 stripeterminal-version = "3.3.0"
+kotlin-version = "1.9.22"
 
 [libraries]
 androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
@@ -31,3 +32,4 @@ stripe-terminal-core = { group = "com.stripe", name = "stripeterminal-core", ver
 stripe-terminal-handoffclient = { group = "com.stripe", name = "stripeterminal-handoffclient", version.ref = "stripeterminal-version" }
 
 [plugins]
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-version" }

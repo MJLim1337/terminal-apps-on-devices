@@ -58,7 +58,8 @@ class InputFragment : Fragment(R.layout.fragment_input), OnTouchListener {
         viewBinding.keypad.key9.setOnTouchListener(this)
         viewBinding.keypad.keyClear.setOnTouchListener(this)
         viewBinding.keypad.keyBackspace.setOnTouchListener(this)
-        viewBinding.submit.setThrottleClickListener { requestNewPayment() }
+//        viewBinding.submit.setThrottleClickListener { requestNewPayment() }
+        viewBinding.submit.setThrottleClickListener { requestReceipt() }
 
         inputViewModel.displayAmount(action = InputViewModel.Action.Clear)
 
@@ -107,8 +108,9 @@ class InputFragment : Fragment(R.layout.fragment_input), OnTouchListener {
         checkoutViewModel.createPaymentIntent(
             CreatePaymentParams(
                 amount = inputViewModel.amount.value.toInt(),
-                currency = "usd",
+                currency = "sgd",
                 description = "Apps on Devices sample app transaction",
+                metadata = mapOf("name" to "testing")
             )
         ) { failureMessage ->
             Snackbar.make(
@@ -120,6 +122,17 @@ class InputFragment : Fragment(R.layout.fragment_input), OnTouchListener {
             ).show()
             viewBinding.submit.isEnabled = true
         }
+    }
+
+    private fun requestReceipt() {
+        findNavController().navigate(
+            InputFragmentDirections.actionInputFragmentToReceiptFragment(
+                paymentIntentID = "123",
+                amount = inputViewModel.amount.value.toInt()
+            ),
+            navOptions()
+        )
+
     }
 
     @SuppressLint("ClickableViewAccessibility")

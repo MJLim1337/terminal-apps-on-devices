@@ -37,6 +37,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 } else {
                     View.INVISIBLE
                 }
+
+                // Comment the code below to auto show/hide based on terminal reader connection
+                viewBinding.indicator.visibility = View.INVISIBLE
             }
         }
 
@@ -57,6 +60,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         viewBinding.newPayment.setThrottleClickListener {
             findNavController().navigate(
                 R.id.action_homeFragment_to_inputFragment,
+                null,
+                navOptions()
+            )
+        }
+        // Create new start button to test navigation
+        viewBinding.startbutton.setThrottleClickListener {
+            findNavController().navigate(
+                R.id.action_homeFragment_to_priceFragment,
                 null,
                 navOptions()
             )

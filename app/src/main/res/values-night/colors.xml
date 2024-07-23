@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="green_200">#C5E1A5</color>
+    <color name="green_500">#8BC34A</color>
+    <color name="green_700">#689F38</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -26,9 +29,9 @@
     <color name="text_amount">#F6F8FA</color>
 
     <!-- Button colors -->
-    <color name="button_default">#0570DE</color>
-    <color name="button_pressed">#03438E</color>
-    <color name="button_disable">#03438E</color>
+    <color name="button_default">#4CAF50</color>
+    <color name="button_pressed">#689F38</color>
+    <color name="button_disable">#DCEDC8</color>
     <color name="button_secondary_default">#1F1F1F</color>
     <color name="button_secondary_pressed">#801F1F1F</color>
     <color name="button_secondary_disable">#1F1F1F</color>
